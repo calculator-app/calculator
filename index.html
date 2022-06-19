@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
+    <link rel="icon" type="image/x-icon" class="site-favicon" href="assets/svg/calicon.svg" />
+    <title>Calculator</title>
+</head>
+<body oncontextmenu="return false;">
+    <div class="bg"></div>
+    <div class="container">
+        <div class="calculator dark">
+            <div class="theme-toggler active">
+                <i class="toggler-icon"></i>
+            </div>
+            <div class="display-screen">
+                <div id="display"></div>
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr>    <!-- FIRST ROW OF BUTTONS -->
+                        <td><button class="btn-operator" id="clear">AC</button></td>
+                        <td><button class="btn-operator" id="(">(</button></td>
+                        <td><button class="btn-operator" id=")">)</button></td>
+                        <td><button class="btn-operator" id="%">%</button></td>
+                        <td><button class="btn-operator" id="backspace"><</button></td>
+                    </tr>
+                    <tr>    <!-- SECOND ROW OF BUTTONS -->
+                        <td><button class="btn-number" id="7">7</button></td>
+                        <td><button class="btn-number" id="8">8</button></td>
+                        <td><button class="btn-number" id="9">9</button></td>
+                        <td><button class="btn-operator" id="/">&divide;</button></td>
+                        <td><button class="btn-operator" id="^">
+                            <span style="position: relative; top: .05em; left: 4px; font-weight: 400; font-size: 1.05em;">x</span>
+                            <span style="position: relative; bottom: .6em; right: .1em; font-size: .75em;">y</span>
+                        </button></td>
+                    </tr>
+                    <tr>    <!-- THIRD ROW OF BUTTONS -->
+                        <td><button class="btn-number" id="4">4</button></td>
+                        <td><button class="btn-number" id="5">5</button></td>
+                        <td><button class="btn-number" id="6">6</button></td>
+                        <td><button class="btn-operator" id="*">&times;</button></td>
+                        <td><button class="btn-operator" id="plmn">&plusmn;</button></td>
+                    </tr>
+                    <tr>    <!-- FOURTH ROW OF BUTTONS -->
+                        <td><button class="btn-number" id="1">1</button></td>
+                        <td><button class="btn-number" id="2">2</button></td>
+                        <td><button class="btn-number" id="3">3</button></td>
+                        <td><button class="btn-operator" id="-">&minus;</button></td>
+                        <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+                    </tr>
+                    <tr>    <!-- FIFTH ROW OF BUTTONS -->
+                        <td><button class="btn-number" id=".">.</button></td>
+                        <td><button class="btn-number" id="0">0</button></td>
+                        <td><button class="btn-number" id="00">00</button></td>
+                        <td><button class="btn-operator" id="+">+</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+<!-- FOOTER SECTION -->
+    <footer>
+        <div class="wrapper">
+            Made with <i class="fa fa-heart pulse"></i> in <a href="https://goo.gl/maps/AGPx7QK8cQLrFs8aA" target="_blank">INDIA</a>
+        </div>
+    </footer>
+    <script src="script/app.js"></script>
+</body>
+</html>

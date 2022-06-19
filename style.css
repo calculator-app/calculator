@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Koulen&family=Rubik:wght@400;500&family=Urbanist:wght@100;200;300;400;500;600&family=Viga&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.5s ease;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: 'Viga', sans-serif;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background-image: none;
+  background-color: #333;
+  background: linear-gradient(300deg, #28d36f, #b70cdd, #0ba6d4, #f30574);
+  background-size: 400% 400%;
+  -webkit-animation: canvas 30s ease infinite;
+  animation: canvas 30s ease infinite;
+}
+
+@-webkit-keyframes canvas {
+  0% {
+    background-position: 0% 50%; 
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes canvas {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg{
+  background-color: transparent;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(15px);
+  z-index: 1;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #000;
+  z-index: 50;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.theme-toggler.active {
+  color: #333;
+}
+
+.theme-toggler.active::before {
+  background-color: #fff;
+}
+
+.theme-toggler::before {
+  content: '';
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #333;
+  z-index: 99;
+}
+
+#display {
+  margin: 0 10px;
+  height: 143px;
+  width: auto;
+  max-width: 306px;
+  display: flex;
+  font-size: 36px;
+  line-height: 63px;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+  overflow-wrap: anywhere;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#display::-webkit-scrollbar {
+  display: block;
+  height: 3px;
+}
+
+button {
+  height: 55px;
+  width: 55px;
+  border: 0;
+  border-radius: 30px;
+  margin: 4px;
+  font-size: 22px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  transition: all 200ms ease;
+  z-index: 51;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  outline: #ffffff4b solid 1px;
+}
+
+button.btn-operator {
+  font-weight: 500;
+}
+
+button#backspace {
+  font-size: 1.5em;
+}
+
+button#\/ {
+  font-size: 1.6em;
+}
+
+button#\% {
+  font-weight: 600;
+  font-size: 1.15em;
+}
+
+button#plmn {
+  font-size: 1.5em;
+}
+
+button#equal {
+  font-size: 1.5em;
+  font-weight: 500;
+  height: 125px;
+}
+
+/* Light Theme >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.calculator {
+  background-color: #fff;
+}
+
+.calculator #display {
+  color: #0a1e23;
+}
+
+.calculator button#clear,
+.calculator button#backspace {
+  background-color: #ffd0d3;
+  color: #fc4552;
+}
+
+.calculator button.btn-number {
+  background-color: #c3eaff;
+  color: #000000;
+}
+
+.calculator button.btn-operator {
+  background-color: #ffc8fa;
+  color: #db40d6;
+}
+  
+.calculator button.btn-equal {
+  background-color: #a3ffb0;
+  color: #000;
+}
+
+/* Dark Theme >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.calculator.dark {
+  background-color: #071115;
+}
+
+.calculator.dark #display {
+  color: #f8fafb;
+}
+
+.calculator.dark button#clear,
+.calculator.dark button#backspace {
+  background-color: #2d191e;
+  color: #bd3740;
+}
+
+.calculator.dark button.btn-number {
+  background-color: #1b2f38;
+  color: #f8fafb;
+}
+
+.calculator.dark button.btn-operator {
+  background-color: #2e1f39;
+  color: #aa00a4;
+}
+
+.calculator.dark button.btn-equal {
+  background-color: #22412c;
+  color: #fff;
+}
+
+/* Footer Text >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.wrapper {
+  font-family: 'Comfortaa', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  color: #fff;
+  font-size: 12px;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 5px 5px 30px #000;
+  z-index: 49;
+}
+
+.wrapper a {
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  color: #ffe600;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.wrapper .fa {
+  color: #E90606;
+  margin: 0 2px;
+  font-size: 13px;
+  animation: heart 0.35s infinite alternate;
+  -webkit-animation: heart 0.35s infinite alternate;
+}
+
+@-webkit-keyframes heart {
+  to {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes heart {
+  to {
+    transform: scale(1.15);
+  }
+}
