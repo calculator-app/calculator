@@ -15,20 +15,17 @@
 body {
   font-family: 'Viga', sans-serif;
   font-weight: 500;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-body {
   background-image: none;
   background-color: #333;
   background: linear-gradient(300deg, #28d36f, #b70cdd, #0ba6d4, #f30574);
   background-size: 400% 400%;
   -webkit-animation: canvas 30s ease infinite;
   animation: canvas 30s ease infinite;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 @-webkit-keyframes canvas {
@@ -53,15 +50,6 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.bg{
-  background-color: transparent;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  backdrop-filter: blur(15px);
-  z-index: 1;
 }
 
 .container {
@@ -292,4 +280,19 @@ button#equal {
   to {
     transform: scale(1.15);
   }
+} 
+
+.base {
+	position: relative;
+	top: 0.05em;
+	left: 4px;
+	font-weight: 400;
+	font-size: 1.05em;
+}
+
+.exponent {
+	position: relative;
+	bottom: 0.6em;
+	right: 0.1em;
+	font-size: 0.75em;
 }
