@@ -15,14 +15,6 @@
 body {
   font-family: 'Viga', sans-serif;
   font-weight: 500;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-body {
   background-image: none;
   background-color: #333;
   background: linear-gradient(300deg, #28d36f, #b70cdd, #0ba6d4, #f30574);
@@ -31,6 +23,11 @@ body {
   animation: canvas 30s ease infinite;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+  
 @-webkit-keyframes canvas {
   0% {
     background-position: 0% 50%; 
